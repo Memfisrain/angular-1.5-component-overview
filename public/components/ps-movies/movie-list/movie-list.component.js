@@ -36,12 +36,19 @@
 			model.rateDown = function(movie) {
 				movie.rating = movie.rating -1 < 1? 1 : movie.rating - 1;
 			};
+
+			model.goTo = function(id) {
+				model.$router.navigate(["Detail", {id: id}]);
+			};
 		}
 
 	module.component("movieList", {
 		templateUrl: "/public/components/ps-movies/movie-list/movie-list.component.html",
 		controllerAs: "model",
-		controller: ["$http", controller]
+		controller: ["$http", controller],
+		bindings: {
+			$router: "<"
+		}
 	});
 
 })();
