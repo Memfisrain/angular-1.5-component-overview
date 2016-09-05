@@ -38,7 +38,7 @@
 			};
 
 			model.goTo = function(id) {
-				model.$router.navigate(["Detail", {id: id}]);
+				model.$router.navigate(["Detail", {id: id}, "Overview"]);
 			};
 		}
 

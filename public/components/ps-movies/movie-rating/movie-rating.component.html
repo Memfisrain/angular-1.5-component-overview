@@ -1,5 +1,3 @@
-<span ng-repeat="v in model.entries track by $index">
-	<ng-transclude>
-		*
-	</ng-transclude>
+<span ng-repeat="className in model.entries track by $index">
+	<span class={{className}}></span>
 </span>

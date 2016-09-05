@@ -7,7 +7,7 @@
 		templateUrl: "public/components/ps-movies/movie-app/movie-app.component.html",
 		$routeConfig: [
 			{path: "/list", component: "movieList", name: "List"},
-			{path: "/detail/:id", component: "movieDetail", name: "Detail"},
+			{path: "/detail/:id/...", component: "movieDetail", name: "Detail"},
 			{path: "/about", component: "appAbout", name: "About"},
 			{path: "/**", redirectTo: ["List"]}
 		]

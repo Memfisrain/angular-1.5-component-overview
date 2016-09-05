@@ -5,9 +5,11 @@
 
 	module.component("movieDetail", {
 		templateUrl: "/public/components/ps-movies/movie-detail/movie-detail.component.html",
-		/*$canActivate: function($timeout) {
-			return $timeout(() => true, 2000);
-		},*/
+		$routeConfig: [
+			{path: "/overview", component: "detailOverview", name: "Overview"},
+			{path: "/cast", component: "detailCast", name: "Cast"},
+			{path: "/director", component: "detailDirector", name: "Director"}
+		],
 		controllerAs: "model",
 		controller: function() {
 			let model = this;
@@ -16,6 +18,18 @@
 				model.id = toRoute.params.id;
 			};
 		}
+	});
+
+	module.component("detailOverview", {
+		template: "Here is the movie overview"
+	});
+
+	module.component("detailCast", {
+		template: "Here is the movie cast"
+	});
+
+	module.component("detailDirector", {
+		template: "Here is the movie director"
 	});
 
 })();
