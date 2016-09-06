@@ -7,7 +7,8 @@
 		templateUrl: "/public/components/ps-movies/movie-rating/movie-rating.component.html",
 		bindings: {
 			value: "<",
-			max: "<"
+			max: "<",
+			setRating: "&"
 		},
 		controllerAs: "model",
 		controller: function() {
